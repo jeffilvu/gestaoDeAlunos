@@ -1,0 +1,151 @@
+/*
+ * Arquivo: src/main/resources/static/styles.css
+ * Tema: Limpo e Profissional
+ */
+
+/* 1. VARIÁVEIS E ESTILOS GLOBAIS */
+:root {
+    --primary-color: #007bff; /* Azul vibrante para botões e links */
+    --secondary-color: #f8f9fa; /* Cinza claro para fundo */
+    --text-color: #343a40; /* Texto escuro */
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--secondary-color);
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 2. NAVBAR (TOPO) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    box-shadow: var(--shadow-light);
+}
+
+.logo-text {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover, .current {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 3. LAYOUT PRINCIPAL E HEADERS */
+.container {
+    max-width: 1200px;
+    margin: 40px auto; /* Centraliza e dá respiro */
+    padding: 0 20px;
+}
+
+.header {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+}
+
+.header h1 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #6c757d;
+}
+
+/* 4. CARDS E BOTÕES */
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
+    margin-bottom: 20px;
+}
+
+.botao-principal {
+    /* Novo estilo de botão mais moderno */
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.botao-principal:hover {
+    background-color: #0056b3; /* Um tom de azul mais escuro */
+    transform: translateY(-1px); /* Pequeno efeito de elevação */
+}
+
+/* 5. Estilo dos links de texto (que não são da navbar) */
+p a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Adicione no styles.css para a Navbar global */
+.global-navbar {
+    background-color: #007bff; /* Cor primária */
+    color: white;
+    padding: 15px 0;
+    margin-bottom: 30px; /* Espaçamento da navbar para o conteúdo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.global-navbar .nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.global-navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.global-navbar a:hover {
+    background-color: #0056b3;
+}

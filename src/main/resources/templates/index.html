@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Alunos e Cursos</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">📚 Sistema de Gestão de Alunos</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/" class="nav-link current">Início</a></li>
+            <li><a href="/cursos" class="nav-link">Gerenciar Cursos</a></li>
+            <li><a href="/alunos" class="nav-link">Gerenciar Alunos</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <header class="header">
+            <h1>Bem-vindo ao Painel de Gestão!</h1>
+            <p class="subtitle">Selecione uma opção no menu para começar.</p>
+        </header>
+
+        <div class="card action-card">
+            <h2>Ações Rápidas</h2>
+            <a href="/alunos/novo" class="botao-principal">Novo Cadastro (Aluno)</a>
+            <a href="/cursos/novo" class="botao-principal">Novo Cadastro (Curso)</a>
+
+        </div>
+
+        </div>
+    
+</body>
+</html>

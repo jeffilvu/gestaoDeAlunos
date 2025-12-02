@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Cadastro de Aluno</h1>
+            <p class="subtitle">Preencha os dados do novo aluno.</p>
+        </header>
+        
+        <div class="card">
+            <form th:action="@{/alunos}" th:object="${aluno}" method="post">
+                
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" th:field="*{nome}" required>
+                    <div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" style="color: red;"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" th:field="*{email}" required>
+                    <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: red;"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="matricula">Matrícula:</label>
+                    <input type="text" id="matricula" th:field="*{matricula}" required>
+                    <div th:if="${#fields.hasErrors('matricula')}" th:errors="*{matricula}" style="color: red;"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="curso">Curso:</label>
+                    <select id="curso" th:field="*{curso}" required>
+                        <option value="">Selecione um curso</option>
+                        <option th:each="c : ${cursos}" 
+                                th:value="${c.id}" 
+                                th:text="${c.nome}">Nome do Curso</option>
+                    </select>
+                    <div th:if="${#fields.hasErrors('curso')}" th:errors="*{curso}" style="color: red;"></div>
+                </div>
+
+                <button type="submit" class="botao-principal">Salvar Aluno</button>
+            </form>
+        </div>
+        
+        <p><a href="/">Voltar para o Início</a></p>
+    </div>
+</body>
+</html>

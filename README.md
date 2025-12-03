@@ -1,3 +1,6 @@
+
+#VIDEO: https://www.youtube.com/watch?v=22infARBD3s
+
 # gestaoDeAlunos
 
 P2 Gestão de Alunos e Cursos
@@ -11,3 +14,5 @@ Spring Data JPA	- Abstração para persistência de dados no banco, via Reposito
 H2 Database	- Banco de dados em memória utilizado para desenvolvimento e testes.
 Thymeleaf	- Motor de templates para renderizar as páginas HTML (Camada View).
 Spring Validation - Utilizado para validar dados de entrada nos formulários (Ex: e-mail, não nulo).
+
+
